@@ -19,7 +19,7 @@ router.get("/download", async (req, res) => {
 
 router.get("/videoInfo", async (req, res) => {
   console.log(req.query.videoURL);
-  return;
+
   videoURL = req.query.videoURL;
   const videoInfo = await ytdl.getInfo(videoURL);
   res.status(200).send(videoInfo);
