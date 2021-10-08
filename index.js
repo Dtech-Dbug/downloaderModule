@@ -6,6 +6,8 @@ const cors = require("cors");
 
 app.use(cors());
 
+const PORT = process.env.PORT || 8000;
+
 app.get("/download", async (req, res) => {
   videoURL = req.query.videoURL;
 
@@ -23,6 +25,6 @@ app.get("/videoInfo", async (req, res) => {
   res.status(200).send(videoInfo);
 });
 
-app.listen("8000", () => {
-  console.log("COnnected");
+app.listen(PORT, () => {
+  console.log(`connected on port : ${PORT}`);
 });
