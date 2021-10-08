@@ -3,6 +3,7 @@ const express = require("express");
 // const ytdl = require("ytdl-core");
 const cors = require("cors");
 const routes = require("./routes");
+require("dotenv").config();
 
 const app = express();
 
